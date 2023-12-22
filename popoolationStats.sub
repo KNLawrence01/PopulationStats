@@ -1,6 +1,8 @@
-universe = vanilla
+universe = container
+docker_image = docker://marissazhang/python_perl_saml_popoo:1.0
+universe = container
 
-transfer_input_files = popoolationStats.sh, popoolationStats_na_KL.py, RNAseq_31.zip 
+transfer_input_files = popoolationStats.sh, popoolationStats_na_KL.py, MtbNCBIH37Rv.fa, RNAseq_31.zip 
 
 executable = popoolationStats.sh
 log = popoolationStat$(Cluster)_$(Process).log
@@ -11,7 +13,7 @@ should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
 request_cpus = 1
-request_memory = 2GB
-request_disk = 2GB
+request_memory = 25GB
+request_disk = 110GB
 
 queue
