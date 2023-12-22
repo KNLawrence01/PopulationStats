@@ -1,0 +1,17 @@
+universe = vanilla
+
+transfer_input_files = popoolationStats.sh, popoolationStats_na_KL.py, RNAseq_31.zip 
+
+executable = popoolationStats.sh
+log = popoolationStat$(Cluster)_$(Process).log
+output = popoolationStat$(Cluster)_$(Process).out
+error = popoolationStat$(Cluster)_$(Process).err
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = 1
+request_memory = 2GB
+request_disk = 2GB
+
+queue
