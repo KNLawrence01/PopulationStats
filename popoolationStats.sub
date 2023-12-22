@@ -1,10 +1,9 @@
 universe = container
 docker_image = docker://marissazhang/python_perl_saml_popoo:1.0
-universe = container
 
 transfer_input_files = popoolationStats.sh, popoolationStats_na_KL.py, MtbNCBIH37Rv.fa, RNAseq_31.zip 
-
 executable = popoolationStats.sh
+
 log = popoolationStat$(Cluster)_$(Process).log
 output = popoolationStat$(Cluster)_$(Process).out
 error = popoolationStat$(Cluster)_$(Process).err
