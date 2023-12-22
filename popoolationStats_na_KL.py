@@ -8,11 +8,11 @@ import numpy as np
 
 #####
 # This script takes in bams from pool-seq, subsamples to minimize effects of
-# differential coverage and calculates genome wide population statistics (pi and Tajima's D) using Popoolation.
+# differential coverage and calculates genome wide population statistics (pi, theta, and Tajima's D) using Popoolation.
 # Note: paths to Popoolation and Samtools scripts and path to reference genome  and target coverage for subsampling are hard coded.
 #####
 ### Edited by Kadee L to get rid of pi and theta at end results
-#Also changed to work for Mtb instead of GV
+#Changed to work for Mtb: orginal code for GV by topfm:MadelineTopf
 
 # check for command line arguments
 if len(sys.argv) < 3:
